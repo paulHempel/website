@@ -1,20 +1,41 @@
-$fonts: 'Raleway', sans-serif;
-$color-accent: #e20020;
-
-$color-font-bright: #000000;
-$color-bg-bright: #FFFFFF;
-
-$color-font-dark: #FFFFFF;
-$color-bg-dark: #1d1f20;
-
-$margin-default: 12px;
-
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+$fonts: 'Raleway', sans-serif;
+$color-accent: #e20020;
+$color-font-bright: #000000;
+$color-bg-bright: #FFFFFF;
+$margin-default: 12px;
+
 body {
-    font-family: $fonts;
+    background-color: $color-bg-bright;
+    color: $color-font-bright;
+    font-family: $fonts; 
     margin: 0px;
     padding: 0px;
+}
+
+header {
+    overflow: hidden;
+    width: 100%;
+
+
+    img#logo {
+        height: 100px;
+        float: left;
+        margin: $margin-default;
+        position: relative;
+    }
+
+    div#header-bar {
+        background-color: $color-accent;
+        min-height: 50px;
+    }
+
+    h1 {
+        color: $color-bg-bright;
+        margin-top: 0px;
+        padding: $margin-default 0px $margin-default $margin-default;
+    }
 }
 
 div.columns {
@@ -24,8 +45,10 @@ div.columns {
     height: 100%;
     justify-content: flex-start;
     align-items: stretch;
-    padding-left: $margin-default;
-
+    
+    div.column {
+        padding: $margin-default;
+    }
 
     div.column.left {
         flex: 4 0 300px
@@ -40,18 +63,6 @@ div.columns {
     }
 }
 
-header, footer {
-    background-color: $color-accent;
-    min-height: 50px;
-    width: 100%;
-}
-
-header h1 {
-    color: $color-bg-bright;
-    margin-top: 0px;
-    padding: $margin-default 0px $margin-default $margin-default;
-}
-
 div.segment h2 {
     margin-top: 0px;    
 }
@@ -64,37 +75,31 @@ a {
 ul.event-list {
     list-style-type: none;
     padding: 0px;
-}
 
-ul.event-list li.single-event {
-    border: 1px solid $color-accent;
-    margin: 0px $margin-default $margin-default 0px;
-    padding: $margin-default;
-}
+    li.single-event {
+        border: 1px solid $color-accent;
+        margin: 0px $margin-default $margin-default 0px;
+        padding: $margin-default;
+    }
 
-ul.event-list li.single-event.past-event a::after {
-    content: ' (Vergangen)'
-}
+    li.single-event.past-event a::after {
+        content: ' (Vergangen)'
+    }
 
-ul.event-list li.single-event p.venue::before {
-    content: '⏰ ';
-}
+    li.single-event p.venue::before {
+        content: '⏰ ';
+    }
 
-ul.event-list li.single-event p.date_time::before {
-    content: '🏢 ';
+    li.single-event p.date_time::before {
+        content: '🏢 ';
+    }
 }
 
 div.twitter-container {
-    float: right;
+    float: none;
 }
 
-body.bright {
-    background-color: $color-bg-bright;
-    color: $color-font-bright;
+footer {
+    overflow: hidden;
+    width: 100%;
 }
-
-body.dark {
-    background-color: $color-bg-dark;
-    color: $color-font-dark;
-}
-

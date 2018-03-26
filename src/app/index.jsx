@@ -4,7 +4,7 @@ import TwitterTimeline from './TwitterTimeline.jsx'
 import Events from './Events.jsx'
 import './css/main.scss'
 
-class App extends React.Component {
+        class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {mode: 'bright'}
@@ -16,21 +16,24 @@ class App extends React.Component {
 
     toggleMode() {
         // Not yet working
-        if(this.getState().mode == 'dark') {
+        if (this.getState().mode == 'dark') {
             this.setState({mode: 'bright'})
             console.log('Setting Body to Bright');
         } else {
             this.setState({mode: 'bright'})
             console.log('Setting Body to Dark');
         }
-        
+
     }
 
     render() {
         return (
                 <div className="app">
                     <header>
-                        <h1>JUG Mainz</h1>
+                        <img id="logo" src="./duke.png"></img>
+                        <div id="header-bar">
+                            <h1>JUG Mainz</h1>
+                         </div>
                     </header>
                     <div className="columns">
                         <div className="column left"> 
