@@ -4,26 +4,9 @@ import TwitterTimeline from './TwitterTimeline.jsx'
 import Events from './Events.jsx'
 import './css/main.scss'
 
-        class App extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {mode: 'bright'}
-    }
-
-    componentDidMount() {
-
-    }
-
-    toggleMode() {
-        // Not yet working
-        if (this.getState().mode == 'dark') {
-            this.setState({mode: 'bright'})
-            console.log('Setting Body to Bright');
-        } else {
-            this.setState({mode: 'bright'})
-            console.log('Setting Body to Dark');
-        }
-
     }
 
     render() {
@@ -33,6 +16,7 @@ import './css/main.scss'
                         <img id="logo" src="./duke.png"></img>
                         <div id="header-bar">
                             <h1>JUG Mainz</h1>
+                            <h2>Eine Community für Java Entwickler in Mainz</h2>
                          </div>
                     </header>
                     <div className="columns">

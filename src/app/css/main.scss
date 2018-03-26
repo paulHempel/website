@@ -28,13 +28,19 @@ header {
 
     div#header-bar {
         background-color: $color-accent;
-        min-height: 50px;
+        min-height: 75px;
     }
 
     h1 {
         color: $color-bg-bright;
-        margin-top: 0px;
-        padding: $margin-default 0px $margin-default $margin-default;
+        margin: 0px;
+        padding: $margin-default 0px 0px 0px;
+    }
+    
+    h2 {
+        color: $color-bg-bright;
+        margin: 0px;
+        padding-bottom: $margin-default;
     }
 }
 
