@@ -19,7 +19,7 @@ const App = (props) =>
     
                 <div className="segment">
                     <h2>Kommende Events</h2>
-                    <UpcomingEvents callback="upcoming" uri="https://api.meetup.com/JUG-Mainz/events?sig_id=229485075&status=upcoming&sig=fcd1fd3693426c1e87a34f2f07a195e21dd119a9&callback="/>
+                    <UpcomingEvents callback="upcoming" uri="https://api.meetup.com/JUG-Mainz/events?page=5&sig_id=229485075&status=upcoming&sig=fa1d3c5fefb5272c51a91d27a8a299d44de6da95&callback="/>
                 </div>
     
                 <div className="segment">
