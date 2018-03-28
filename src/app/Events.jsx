@@ -24,15 +24,15 @@ import fetchJsonp from 'fetch-jsonp'
                 fetchJsonp(this.props.uri + this.props.callback,
                         {jsonpCallbackFunction: this.props.callback})
                         .then(response => response.json())
-                        .then(data => this.setState({events: data.data}))
+                        .then((data) => this.setState({events: data.data}))
+
             }
 
             render() {
                 let entriesExist = this.state.events.length > 0;
                 const eventList = entriesExist ? 
                         <ul className="event-list">
-                            {this.state.events.filter((event) => event.visibility == 'public')
-                                              .slice(0, 5)
+                            {this.state.events.filter((event) => event.visibility === 'public')
                                               .map((event) => <Event key={event.id} event={event}></Event>)}
                         </ul>
                         :

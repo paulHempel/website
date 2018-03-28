@@ -4,14 +4,14 @@ var path = require('path');
 var BUILD_DIR = path.resolve(__dirname, 'src/public_html');
 var APP_DIR = path.resolve(__dirname, 'src/app');
 
-var config = {
+module.exports = {
     entry: APP_DIR + '/index.jsx',
     output: {
         path: BUILD_DIR,
         filename: 'bundle.js'
     },
     module: {
-        rules: [ 
+        rules: [
             {
                 test: /\.jsx$/,
                 exclude: /(node_modules|bower_components)/,
@@ -32,5 +32,3 @@ var config = {
         ]
     }
 };
-
-module.exports = config;
