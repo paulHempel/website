@@ -87,7 +87,7 @@ ul.event-list {
         margin: 0px $margin-default $margin-default 0px;
         padding: $margin-default;
     }
-
+    
     li.single-event.past-event a::after {
         content: ' (Vergangen)'
     }

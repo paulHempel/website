@@ -2,6 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 import TwitterTimeline from './TwitterTimeline.jsx'
 import Events from './Events.jsx'
+import UpcomingEvents from './UpcomingEvents.jsx'
 import './css/main.scss'
 
 const App = (props) =>
@@ -18,7 +19,7 @@ const App = (props) =>
     
                 <div className="segment">
                     <h2>Kommende Events</h2>
-                    <Events callback="upcoming" uri="https://api.meetup.com/JUG-Mainz/events?sig_id=229485075&status=upcoming&sig=fcd1fd3693426c1e87a34f2f07a195e21dd119a9&callback="/>
+                    <UpcomingEvents callback="upcoming" uri="https://api.meetup.com/JUG-Mainz/events?sig_id=229485075&status=upcoming&sig=fcd1fd3693426c1e87a34f2f07a195e21dd119a9&callback="/>
                 </div>
     
                 <div className="segment">
