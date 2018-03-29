@@ -6,6 +6,7 @@ import Event from './Event.jsx'
             constructor(props) {
                 super(props)
                 this.state = {events: [],
+                              exception: false,
                               collapsed: true}
             }
 
@@ -13,7 +14,8 @@ import Event from './Event.jsx'
                 fetchJsonp(this.props.uri + this.props.callback,
                         {jsonpCallbackFunction: this.props.callback})
                         .then(response => response.json())
-                        .then((data) => this.setState({events: data.data}))
+                        .then((data) => this.setState({events: data.data, exception: false}))
+                        .catch(this.setState({exception: true}))
                 
                 this.toggle = this.toggle.bind(this);
             }
@@ -24,10 +26,10 @@ import Event from './Event.jsx'
             }
 
             render() {
-                let entriesExist = this.state.events.length > 0;
+                let exceptionExists = this.state.exception
+                let entriesExist = this.state.events.length > 0
                 const eventList = entriesExist ?
                         <div>
-                            <a href="#" onClick={this.toggle}>{this.state.collapsed ? 'Mehr sehen' : 'Weniger sehen'}</a>
                             <ul className="event-list">
                                 <Event key={this.state.events[0].id} event={this.state.events[0]}/>
                                 {
@@ -35,13 +37,21 @@ import Event from './Event.jsx'
                                                  .slice(1, 5)
                                                  .map((event) => <Event key={event.id} event={event}/>)}
                             </ul>
+                            <a href="#" onClick={this.toggle}>{this.state.collapsed ? 'Mehr sehen' : 'Weniger sehen'}</a>
+                        </div>
+                        :
+                        (exceptionExists === true ?
+                        <div>
+                            <ul className="event-list">
+                            <li>⚡️ Verbindung zu <a href="https://www.meetup.com/JUG-Mainz/">Meetup</a> konnte nicht aufgebaut werden ⚡️</li>
+                            </ul>
                         </div>
                         :
                         <div>
                             <ul className="event-list">
                                 <li>Keine ausstehenden Events - wir sind dabei, das zu ändern 🙂</li>
                             </ul>
-                        </div>
+                        </div>)
 
                 return eventList
             }
