@@ -37,7 +37,7 @@ import Event from './Event.jsx'
                                                  .slice(1, 5)
                                                  .map((event) => <Event key={event.id} event={event}/>)}
                             </ul>
-                            <a href="#" onClick={this.toggle}>{this.state.collapsed ? 'Mehr sehen' : 'Weniger sehen'}</a>
+                            <a href="#/" onClick={this.toggle}>{this.state.collapsed ? 'Mehr sehen' : 'Weniger sehen'}</a>
                         </div>
                         :
                         (exceptionExists === true ?

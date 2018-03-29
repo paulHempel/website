@@ -2,7 +2,8 @@ import React from 'react'
 import fetchJsonp from 'fetch-jsonp'
 import Event from './Event.jsx'
 
-        class Events extends React.Component {
+class Events extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {events: [],
