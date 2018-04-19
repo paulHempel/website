@@ -55,7 +55,7 @@ class SponsorList extends React.Component {
                         {this.state.companies.map((sponsor) => <SponsorPanel key={sponsor.id} sponsor={sponsor} />)}
                     </ul>
                     <div>
-                        Wir bedanken uns bei unseren Sponsoren für die Unterstützung bei der Organisation, die Bereitstellung von Räumen und die Verpflegung bei unseren Treffen!
+                        Wir bedanken uns bei unseren Sponsoren für die Hilfe bei der Organisation, die Bereitstellung von Räumen und die Verpflegung bei unseren Treffen!
                     </div>
                 </div>
 

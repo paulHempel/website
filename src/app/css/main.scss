@@ -65,11 +65,11 @@ div.columns {
     }
 
     div.column.left {
-        flex: 5 0 300px
+        flex: 5 0 300px;
     }
 
     div.column.right {
-        flex: 1 4 300px;
+        flex: 1 4 150px;
     }
 
     div.segment {
@@ -85,6 +85,11 @@ div.columns {
 a {
     font-weight: bold;
     color: $color-accent;
+}
+
+a.see-more-events {
+    margin-top: 12px;
+    display: block;
 }
 
 ul.event-list {
@@ -115,6 +120,7 @@ ul.event-list {
     li.single-event:last-of-type {
         margin: 0px;
     }
+
 }
 
 ul.sponsor-list {
