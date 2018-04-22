@@ -50,7 +50,7 @@ class SponsorList extends React.Component {
 
     render() {
         const markup =
-                <div>
+                <div class="sponsors">
                     <ul className="sponsor-list">
                         {this.state.companies.map((sponsor) => <SponsorPanel key={sponsor.id} sponsor={sponsor} />)}
                     </ul>

@@ -14,28 +14,54 @@ $margin-default: 12px;
     }
 }
 
+
+
 body {
-    background-color: $color-bg-bright;
     color: $color-font-bright;
     font-family: $fonts; 
     margin: 0px;
     padding: 0px;
+    font-size: 1.2em;
 }
+
+h1 {
+    font-size: 2.9em;
+}
+h2 {
+
+    font-size: 2.5em;   
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
 
 header {
     overflow: hidden;
     width: 100%;
+    background: linear-gradient($color-accent, #db4055);
 
 
     img#logo {
-        height: 100px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 15px;
+        height: 150px;
         float: left;
         margin: $margin-default;
         position: relative;
     }
 
-    div#header-bar {
-        background-color: $color-accent;
+    div#header-bar {    
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
         min-height: 75px;
     }
 
@@ -43,6 +69,7 @@ header {
         color: $color-bg-bright;
         margin: 0px;
         padding: $margin-default 0px 0px 0px;
+        font-size: 3.3em;
     }
 
     h2 {
@@ -57,11 +84,13 @@ div.columns {
     display: flex;  
     flex-wrap: wrap;
     height: 100%;
+    max-width: 1200px;
     justify-content: flex-start;
-    margin: 0px;
-    max-width: 1000px;
-    margin-right: auto;
+    margin-bottom: 40px;
+    padding-top: 30px;
+    max-width: 1200px;
     margin-left: auto;
+    margin-right: auto;
 
     div.column {
         padding: 0px $margin-default 0px $margin-default;
@@ -69,30 +98,42 @@ div.columns {
 
     div.column.left {
         flex: 5 0 300px;
+        padding-top: 0;
+        padding-right:15px;
+        padding-left:15px;
     }
 
     div.column.right {
         flex: 1 4 150px;
+        margin-top:4.9em;
     }
 
     div.segment {
         margin-bottom: 3 * $margin-default;
         overflow: hidden;
+        line-height: 1.7;
     }
 
     div.segment h2 {
-        margin: 0px 0px $margin-default 0px;    
+        margin: 0px 0px $margin-default 0px; 
     }
 }
 
 a {
     font-weight: bold;
     color: $color-accent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8a0719;
+    text-decoration: underline;
 }
 
 a.see-more-events {
     margin-top: 12px;
     display: block;
+    margin-left: 10px;
 }
 
 ul.event-list {
@@ -101,10 +142,15 @@ ul.event-list {
     padding: 0px;
 
     li.single-event {
-        border: 1px solid $color-accent;
-        border-radius: 2px;
-        margin: 0px 0px $margin-default 0px;
+        //border: 1px solid #ccc;
+        //margin: 10px 10px $margin-default 0px;
+        margin-left: 2px;
+        margin-right: 1px;
         padding: $margin-default;
+        box-shadow: 0px 2px 2px 0 #ddd,
+        0px 0 0px 1px #ddd;
+        border-radius: 3px;
+        margin-bottom: 13px;
 
         h3 {
             color: $color-bg-bright;
@@ -122,7 +168,6 @@ ul.event-list {
     }
 
     li.single-event:last-of-type {
-        margin: 0px;
     }
 
 }
@@ -130,7 +175,6 @@ ul.event-list {
 ul.sponsor-list {
     list-style-type: none;
     padding: 0px;
-    float:left;
     margin: 0px $margin-default 0px 0px;
 
     li.sponsor-panel { 
@@ -145,14 +189,33 @@ ul.sponsor-list {
 
 div.twitter-container {
     float: none;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 2px 0 #ddd,
+    0px 0 0px 1px #ddd;
+    border-radius: 3px;
+
+    h4 {
+        padding-left:20px;
+    }
 }
 
+
 footer {
-    background-color: $color-accent;
+    background: linear-gradient($color-accent, #db4055);
     color: $color-bg-bright;
     min-height: 50px;
     overflow: hidden;
     padding-top: $margin-default;
     text-align: center;
     width: 100%;
+}
+
+div.lightbg {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 2px #ddd;
+    padding: 20px;
+    padding-top: 0px;
+    box-shadow: 0px 2px 2px 0 #ddd,
+    0px 0 0px 1px #ddd;
+    border-radius: 3px;
 }
